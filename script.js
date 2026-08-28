@@ -39,7 +39,7 @@ function createHearts() {
 
         const heart = document.createElement("div");
 
-        heart.innerHTML = "❤️💞💕 ";
+        heart.innerHTML = "❤️";
 
         heart.style.position = "fixed";
 
@@ -71,4 +71,17 @@ function createHearts() {
 
         }, 3100);
     }
+}
+
+
+function playMusic() {
+
+    const music = document.getElementById("bgMusic");
+    music.play()
+         .then(()=>{
+                console.log("Music playing");
+                })
+                .catch((error)=>{
+                    console.error("Error playing music:", error);
+                });
 }
