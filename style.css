@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1f8,
+            #ffe4ec,
+            #fff5d7
+        );
+
+    overflow-x: hidden;
+
+    text-align: center;
+}
+
+/* Main container */
+
+.container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+/* Title */
+
+h1 {
+
+    font-size: 50px;
+
+    color: #d63384;
+
+    animation: titleAnimation 2s infinite alternate;
+}
+
+.subtitle {
+
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    color: #555;
+}
+
+/* Characters */
+
+.characters {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+    margin-top: 60px;
+}
+
+.person {
+
+    transition: 0.5s;
+}
+
+.person:hover {
+
+    transform: scale(1.15);
+}
+
+.head {
+
+    font-size: 120px;
+}
+
+.person h2 {
+
+    color: #7b2cbf;
+
+    margin-top: 10px;
+}
+
+/* Rakhi */
+
+.rakhi-area {
+
+    font-size: 70px;
+
+    animation: rakhiMove 2s infinite alternate;
+}
+
+/* Message */
+
+.message {
+
+    margin: 50px auto;
+
+    max-width: 600px;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,0.8);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+.message h2 {
+
+    color: #d63384;
+
+    margin-bottom: 20px;
+}
+
+.message p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin: 10px;
+}
+
+/* Buttons */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+button {
+
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    background: #d63384;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.1);
+
+    background: #a61e62;
+}
+
+/* Surprise */
+
+#surpriseMessage {
+
+    display: none;
+
+    margin-top: 40px;
+
+    font-size: 30px;
+
+    color: #d63384;
+
+    font-weight: bold;
+
+    animation: surpriseAnimation 1s ease;
+}
+
+/* Animations */
+
+@keyframes titleAnimation {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes rakhiMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes surpriseAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.5);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    h1 {
+
+        font-size: 35px;
+    }
+
+    .characters {
+
+        gap: 15px;
+    }
+
+    .head {
+
+        font-size: 80px;
+    }
+
+    .rakhi-area {
+
+        font-size: 45px;
+    }
+
+}
